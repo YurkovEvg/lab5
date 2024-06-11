@@ -28,8 +28,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculateDepositSum(depositAmount: Double, duration: Int): Double {
-        // Рассчет суммы вклада
-        // здесь должен быть ваш алгоритм
-        return 150.0
+        // Пример расчета суммы вклада
+        var sum = depositAmount
+
+        for (i in 1..duration) {
+            // Здесь может быть ваш логика расчета суммы вклада на каждый месяц
+            sum += sum * 0.1 // Пример расчета при условии 10% годовых
+        }
+
+        return sum
     }
+
 }
